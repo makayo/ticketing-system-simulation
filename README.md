@@ -1,38 +1,39 @@
 # Ticketing System — Documentation
 
 ## 1. Flowchart / Diagram (Minimal & Clear)
-
-┌────────────────────┐
-│ Start Program │
-└─────────┬──────────┘
-│
-▼
-┌────────────────────┐
-│ Generate Tickets │
-│ (n times, FIFO) │
-└─────────┬──────────┘
-│
-▼
-┌────────────────────┐
-│ Add to Queue       │
-│ (deque append)     │
-└─────────┬──────────┘
-│
-▼
-┌────────────────────┐
-│ Process Tickets    │
-│ (popleft FIFO)     │
-└─────────┬──────────┘
-│
-▼
-┌────────────────────┐
-│ Queue Empty?       │
-└───────┬────────────┘
-│Yes
-▼
-┌────────────────────┐
-│ End                │
-└────────────────────┘
+```text
+  ----------------------
+ │    Start Program    │
+ ----------------------
+           │
+           ▼
+ ----------------------
+ │  Generate Tickets   │
+ │    (n times, FIFO)  │
+ ----------------------
+           │
+           ▼
+ ----------------------
+ │     Add to Queue    │
+ │    (deque append)   │
+ ----------------------
+           │
+           ▼
+ ----------------------
+ │   Process Tickets   │
+ │    (popleft FIFO)   │
+ ----------------------
+           │
+           ▼
+ ----------------------
+ │     Queue Empty?    │
+ ----------------------
+           │ Yes
+           ▼
+ ----------------------
+ │         End         │
+ ----------------------
+```
 
 ---
 
@@ -44,6 +45,7 @@
 4. Is the timestamp required to be in a specific format?
 5. Should the queue ever allow priority tickets, or is it strictly FIFO?
 6. Should the program run continuously, or only simulate a single batch of customers?
+
 
 ---
 
